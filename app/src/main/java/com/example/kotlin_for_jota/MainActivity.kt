@@ -8,8 +8,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Enum Classes
-        workWithEnumClasses()
+        // 1- Enum Classes
+        // workWithEnumClasses()
+
+        // 2- Nested and Inner Classes
+        // nestedAndInnerClasses()
     }
 
     private fun workWithEnumClasses() {
@@ -22,4 +25,20 @@ class MainActivity : AppCompatActivity() {
         println(userDirection.descriptionInSpanish() + " | Movement" + userDirection.movement)
     }
 
+    private fun nestedAndInnerClasses() {
+
+        // Nested Class
+        val myNestedClass = MyNestedAndInnerClass.MyNestedClass()
+        val result = myNestedClass.add(1, 2)
+        println("Result $result")
+
+        // Inner class
+        val myInnerClass = MyNestedAndInnerClass().MyInnerClass()
+        val result2: Int = myInnerClass.addOne(1)
+    }
+
+
+    private fun classInheritance() {
+
+    }
 }
